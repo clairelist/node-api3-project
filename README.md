@@ -73,7 +73,7 @@ The _Database Schemas_ for the `users` and `posts` resources are:
 
 We have provided test data for the resources.
 
-#### Important Notes
+#### Important Notes ARB EDIT HERE TODAY
 
 - Reset the database by executing `npm run resetdb`.
 - Test your work manually using Postman or HTTPie. Run automatic tests by executing `npm test`.
