@@ -6,7 +6,8 @@
         "start": "node index.js",
         "server": "nodemon index.js",
         "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
-        "resetdb": "knex migrate:rollback && knex migrate:latest && knex seed:run"
+        "resetdb": "knex migrate:rollback && knex migrate:latest && knex seed:run",
+        "pushr": "git add .; git commit -m 'next push'; git push"
     },
     "repository": {
         "type": "git",
