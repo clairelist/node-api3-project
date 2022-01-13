@@ -32,14 +32,22 @@ async function validateUserId(req, res, next) { //asyncronous bc we are calling 
 
 function validateUser(req, res, next) {
   // DO YOUR MAGIC
-  console.log('validateUser middleware !');
-  next(); 
+  const {name} = req.body;
+  if (!name) {
+      res.status(400).json({message: 'missing required name field'}); //RES NOT REQUEST !
+  } else {
+    next();
+  }
 }
 
 function validatePost(req, res, next) {
   // DO YOUR MAGIC
-  console.log('validatePost middleware !');
-  next();
+  const {text} = req.body;
+  if (!text) {
+      res.status(400).json({message: 'missing required name field'}); //RES NOT REQUEST !
+  } else {
+    next();
+  }
 }
 
 module.exports = {
