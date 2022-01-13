@@ -6,14 +6,14 @@
         "start": "node index.js",
         "server": "nodemon index.js",
         "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
-        "resetdb": "knex migrate:rollback && knex migrate:latest && knex seed:run",
-        "pushr": "git add .; git commit -m 'next push'; git push"
+        "resetdb": "knex migrate:rollback && knex migrate:latest && knex seed:run"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/BloomInstituteOfTechnology/node-api3-project.git"
     },
     "dependencies": {
+        "cors": "^2.8.5",
         "express": "^4.17.1",
         "knex": "^0.95.14",
         "sqlite3": "^5.0.2"

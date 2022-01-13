@@ -1,9 +1,10 @@
 const express = require('express');
-
 const server = express();
+// const cors = require('cors');
+// const hubsRouter = require('patth');
 
-// remember express by default cannot parse JSON in request bodies
-
+//server.use(cors());
+server.use(express.json());
 // global middlewares and the user's router need to be connected here
 
 server.get('/', (req, res) => {
