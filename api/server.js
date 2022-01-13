@@ -1,18 +1,19 @@
 //// DATA SECTION
 const express = require('express');
-const server = express();
-// const cors = require('cors');
-//const usersRouter = require('./users/users-router');
-
 const {logger} = require('./middleware/middleware');
+const server = express();
+const usersRouter = require('./users/users-router');
+
+
 
 //// LOGIC SECTION
 //server.use(cors());
 server.use(express.json());
 // global middlewares and the user's router need to be connected here
-//server.use('/api/users', usersRouter);
+server.use(logger); //REMEMBER THE ORDER MATTERS !
+server.use('/api/users', usersRouter);
 
-server.use(logger);
+
 
 server.get('/', (req, res) => {
   res.send(`<h2>Let's write some middleware!</h2>`);
